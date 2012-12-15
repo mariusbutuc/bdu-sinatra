@@ -1,50 +1,36 @@
 %html
   %head
-    %meta{ :charset => 'utf-8' }
+    %meta{ charset: 'utf-8' }
     %title Learn Hadoop & Big Data with Free Courses Online | Big Data University
-    %meta{ :name => 'description', :content => 'Learn Big Data technologies like Hadoop, HDFS, Hive, HBase, MapReduce, JAQL, Pig, Flume, ZooKeeper, Mahout, Streams, and others. Big Data University offers free online courses taught by the leading experts in the field. Complete these free courses on your schedule. Use free course materials, videos and books.' }
-    %meta{ :name => 'keywords', :content => 'Hadoop, HDFS, JAQL, Pig, Flume, Hive, BigData, Big Data, Course, Free, MapReduce, ZooKeeper, Streams, Event Processing, Online Courses, Books, Apache, Linux' }
-    %meta{ :name => 'author', :content => 'Big Data University' }
+    %meta{ name: 'description', content: 'Learn Big Data technologies like Hadoop, HDFS, Hive, HBase, MapReduce, JAQL, Pig, Flume, ZooKeeper, Mahout, Streams, and others. Big Data University offers free online courses taught by the leading experts in the field. Complete these free courses on your schedule. Use free course materials, videos and books.' }
+    %meta{ name: 'keywords', content: 'Hadoop, HDFS, JAQL, Pig, Flume, Hive, BigData, Big Data, Course, Free, MapReduce, ZooKeeper, Streams, Event Processing, Online Courses, Books, Apache, Linux' }
+    %meta{ name: 'author', content: 'Big Data University' }
 
     :plain
       <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
       <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
       <![endif]-->
 
-    / Le styles
-    %link{ :href => "/css/bootstrap.css", :type => "text/css", :rel => "stylesheet" }
-
-    / add body padding styles
-    %link{ :href => "/css/styles.css", :type => "text/css", :rel => "stylesheet" }
-    %link{ :href => "/css/bootstrap-responsive.css", :type => "text/css", :rel => "stylesheet" }
-
-    / Le fav and touch icons
-    %link{ :rel => "shortcut icon", :href => "/img/favicon.ico"}
+    %link{ href: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css' : '/css/bootstrap.css',
+            type: 'text/css', rel: 'stylesheet' }
+    %link{ href: '/css/styles.css', type: 'text/css', rel: 'stylesheet' }
+    %link{ href: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css' : '/css/bootstrap-responsive.css',
+            type: 'text/css', rel: 'stylesheet' }
+    %link{ href: '/img/favicon.ico', rel: 'shortcut icon' }
 
   %body
 
     = haml :navbar
 
-    %section.container{ :role => 'main' }
+    %section.container{ role: 'main' }
       = yield
 
     = haml :footer
 
     / Placed at the end of the document so the pages load faster
-    %script{ :type => "text/javascript", :src =>"/js/jquery.js"}
-    %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-transition.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-alert.js"}
-    %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-modal.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-dropdown.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-scrollspy.js"}
-    %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-tab.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-tooltip.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-popover.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-button.js"}
-    %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-collapse.js"}
-    %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-carousel.js"}
-    / %script{ :type => "text/javascript", :src =>"/js/basic/bootstrap-typeahead.js"}
+    %script{ src: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js' : '/js/jquery.js', type: 'text/javascript' }
+    %script{ src: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js' : '/js/bootstrap.js', type: 'text/javascript' }
     :javascript
       $(document).ready(function() {
         $('.carousel').carousel();
