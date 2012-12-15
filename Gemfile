@@ -6,14 +6,17 @@ gem 'haml'
 gem 'shotgun'
 gem 'thin'
 
-group :production, :test do
+group :production do
   gem 'pg'
   gem 'dm-postgres-adapter'
 end
 
-group :development do
+group :development, :test do
   gem 'sqlite3'
   gem 'dm-sqlite-adapter'
+end
+
+group :development do
   gem 'tux'
 end
 
