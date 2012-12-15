@@ -6,13 +6,17 @@ gem 'haml'
 gem 'shotgun'
 gem 'thin'
 
-group :production do
-    gem 'pg'
-    gem 'dm-postgres-adapter'
+group :production, :test do
+  gem 'pg'
+  gem 'dm-postgres-adapter'
 end
 
-group :development, :test do
-    gem 'sqlite3'
-    gem 'dm-sqlite-adapter'
-    gem 'tux'
+group :development do
+  gem 'sqlite3'
+  gem 'dm-sqlite-adapter'
+  gem 'tux'
+end
+
+group :test do
+  gem 'rake'
 end
