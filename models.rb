@@ -1,4 +1,4 @@
-DataMapper.setup(:default, "sqlite://#{Dir.pwd}/bdu.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/bdu.db")
 
 # module DownloadableResource
 #   def self.included base
