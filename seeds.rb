@@ -284,6 +284,6 @@ testimonials = [
   { author: 'Cristian', testimonial: 'This is a very well put together course for IBM DataStudio for beginners which covers some basics of the Eclipse platform also. <br />Thanks for another great course!' },
 ]
 testimonials.each do |t|
-  Testimonial.create testimonial: t[:testimonial], author: t[:author]
+  Testimonial.first_or_create({ testimonial: t[:testimonial] }, { author: t[:author] })
 end
 
