@@ -1,5 +1,16 @@
 language: ruby
 rvm:
   - 1.9.3
-# uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+env:
+  global:
+    - secure: "xEf501AABgohpZ86E3Y0mUu9BL2OFkmdwQpTKAqseV9cJZsVmHkEhTrjMsGN\nk804waf3+XdzqkG5T4mVOyDHo3NUzw0amUa/3x9lPXNawtmGxrq35HUKQusM\nuTQ/nw0GqVXJW8PmjI2qoJeb5NkibaxMpZM1HjkKB+AZeu//LEc="
+after_script:
+  - gem install heroku
+  - git remote add heroku git@heroku.com:bdu-on-sinatra.git
+  - echo "Host heroku.com" >> ~/.ssh/config
+  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+  - echo "   CheckHostIP no" >> ~/.ssh/config
+  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+  - heroku keys:clear
+  - yes | heroku keys:add
+  - yes | git push heroku master

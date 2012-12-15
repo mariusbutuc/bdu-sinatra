@@ -19,8 +19,6 @@ end
 
 group :development do
   gem 'tux'
-end
-
-group :test do
-
+  gem 'travis'
+  gem 'travis-lint'
 end
