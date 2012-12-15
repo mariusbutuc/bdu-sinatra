@@ -14,6 +14,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'dm-sqlite-adapter'
+  gem 'rake'
 end
 
 group :development do
@@ -21,5 +22,5 @@ group :development do
 end
 
 group :test do
-  gem 'rake'
+
 end
