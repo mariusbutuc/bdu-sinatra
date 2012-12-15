@@ -1,7 +1,9 @@
-task :default do
-  puts "Hey Travis CI, Marius greets you!"
-end
+desc "Hey Travis CI, Marius greets you for the need to write Rake tasks!"
+task :default => 'db:seed'
 
-task :environment do
-  require File.expand_path(File.join(*%w[ config environment ]), File.dirname(__FILE__))
+namespace :db do
+  desc 'Load the seed data from seeds.rb'
+  task :seed do
+    ruby "seeds.rb"
+  end
 end
