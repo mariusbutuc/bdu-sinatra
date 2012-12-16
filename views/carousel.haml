@@ -12,7 +12,7 @@
       - if slide == slides.first
         .item.active
           %a{ :href => slide['url'] }
-            %img.img-rounded{ :src => "http://placehold.it/1200x480" }
+            %img.img-rounded{ :src => "http://placehold.it/1200x480", width: 1200, height: 480 }
             .carousel-caption
               %h4
                 #{slide['title']}
@@ -21,7 +21,7 @@
       - else
         .item
           %a{ :href => slide['url'] }
-            %img.img-rounded{ :src => "http://placehold.it/1200x480&text=#{slide['title']}" }
+            %img.img-rounded{ :src => "http://placehold.it/1200x480&text=#{slide['title']}", width: 1200, height: 480 }
             .carousel-caption
               %h4
                 #{slide['title']}

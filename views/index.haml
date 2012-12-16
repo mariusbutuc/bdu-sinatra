@@ -18,7 +18,7 @@
       source enthusiasts, the academia, professionals, and companies
       including IBM, Amazon, and Jaspersoft.
     %p
-      %a.btn.btn-primary{:href => '/'} Learn more »
+      %a.btn.btn-primary{ href: '/'} Learn more »
   .span4
     %header
       %h2
@@ -37,7 +37,7 @@
       important discoveries in the health industry, the environment, and
       any other area you can think of!
     %p
-      %a.btn.btn-primary{:href => '/'} Big Data use cases »
+      %a.btn.btn-primary{ href: '/'} Big Data use cases »
   .span4
     %header
       %h2
@@ -53,7 +53,7 @@
       and nicely structured. Pass the course test to print your certificate
       immediately!
     %p
-      %a.btn.btn-primary{ :href => '/courses' } Course catalog »
+      %a.btn.btn-primary{ href: '/courses' } Course catalog »
 
 %hr
 
@@ -65,11 +65,12 @@
     %ul.thumbnails
       %li.span4
         .thumbnail
-          %img.img-rounded{ :src => 'img/what-is-hadoop.png', :width => '360', :height => '260', :alt => 'Akmal Chaudhri on Hadoop and Big Data', :data => { :src => 'img/what-is-hadoop.png' } }
+          %img.img-rounded{ src: 'img/what-is-hadoop.png', width: '360', height: '260', alt: 'Akmal Chaudhri on Hadoop and Big Data', data: { src: 'img/what-is-hadoop.png' } }
           %p.pagination-centered
             %small Akmal&nbsp;Chaudhri on Hadoop and Big&nbsp;Data
           %p.pagination-centered
-            %a.btn.btn-large.btn-primary{ :href => '/signup' } Sign up
+            / %a.btn.btn-large.btn-primary{ href: '/signup' } Sign up
+            %a.btn.btn-large.btn-primary{ href: '#myModal', role: 'button', data: { toggle: 'modal' } } Sign up
 
   .span8
     %header
@@ -84,3 +85,5 @@
               #{t.testimonial}
             %small
               %cite #{t.author}
+
+#myModal.modal.hide.fade

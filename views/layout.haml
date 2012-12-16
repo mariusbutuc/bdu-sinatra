@@ -17,6 +17,7 @@
     %link{ href: '/css/styles.css', type: 'text/css', rel: 'stylesheet' }
     %link{ href: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css' : '/css/bootstrap-responsive.css',
             type: 'text/css', rel: 'stylesheet' }
+    %link{ href: '/css/bootstrap-modal.css', type: 'text/css', rel: 'stylesheet' }
     %link{ href: '/img/favicon.ico', rel: 'shortcut icon' }
 
   %body
@@ -30,7 +31,9 @@
 
     / Placed at the end of the document so the pages load faster
     %script{ src: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js' : '/js/jquery.js', type: 'text/javascript' }
-    %script{ src: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js' : '/js/bootstrap.js', type: 'text/javascript' }
+    %script{ src: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js' : '/js/bootstrap.js',
+              type: 'text/javascript' }
+    %script{ src: '/js/bootstrap-modal.js', type: 'text/javascript' }
     :javascript
       $(document).ready(function() {
         $('.carousel').carousel();
