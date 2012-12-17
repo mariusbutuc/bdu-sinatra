@@ -8,6 +8,8 @@ $(document).ready(function() {
     var url = $(this).attr('href');
     return $(target).load(url);
   });
+
+  // "stop" the video once the modal has been closed
   $('.modal').on('hide', function () {
     $(this).empty();
   });
