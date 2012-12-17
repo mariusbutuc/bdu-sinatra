@@ -8,4 +8,7 @@ $(document).ready(function() {
     var url = $(this).attr('href');
     return $(target).load(url);
   });
+  $('.modal').on('hide', function () {
+    $(this).empty();
+  });
 });
