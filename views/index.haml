@@ -77,12 +77,12 @@
   .span8
     %header
       %h3
-        &hellip;and what they're saying:
+        According to big data users&hellip;
     %ul.unstyled
       -# TODO: get the testimonials from the DB
       - Testimonial.all.sample(3).each do |t|
         %li
-          %blockquote.pull-right
+          %blockquote
             %p
               #{t.testimonial}
             %small

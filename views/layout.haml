@@ -20,6 +20,11 @@
   %body
 
     = haml :navbar
+    .container
+      %form.form-search.pull-right{ role: 'search' }
+        .input-append
+          %input.search-query.span2#appendedInput{ name: 'q', type: 'search', placeholder: 'Search courses...' }
+          %button.btn{ type: 'submit' } Go
 
     %section.container{ role: 'main' }
       = yield

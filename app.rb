@@ -17,12 +17,12 @@ redirects = {
   'bugs'      => 'https://bitbucket.org/DB2UAdmin/bdu/issues/new'
 }
 
-get '/hadoop-and-big-data-video/?' do
-  haml :vimeo, :layout => false
-end
-
 redirects.each do | slug, outbound_url |
   get "/#{slug}/?" do
     redirect outbound_url
   end
+end
+
+get '/hadoop-and-big-data-video/?' do
+  haml :vimeo, :layout => false
 end

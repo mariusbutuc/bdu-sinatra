@@ -1,4 +1,4 @@
-%footer{ :role => 'contentinfo' }
+%footer{ role: 'contentinfo' }
   .navbar.navbar-inverse.navbar-fixed-bottom
     .navbar-inner
       .container
@@ -8,20 +8,13 @@
             - case page
             - when 'faq'
               %li
-                %a{:href => "/#{page}"}#{page.upcase}
-              %li.divider-vertical
+                %a{ href: "/#{page}" }= page.upcase
             - when 'about us'
               %li
-                %a{:href => "/about"}#{page.capitalize}
-              %li.divider-vertical
+                %a{ href: "/about" }= page.capitalize
             - when 'bug reports'
               %li
-                %a{:href => "/bugs"}#{page.capitalize}
-              %li.divider-vertical
-            - when pages.last
-              %li
-                %a{:href => "/#{page}"}#{page.capitalize}
+                %a{ href: "/bugs" }= page.capitalize
             - else
               %li
-                %a{:href => "/#{page}"}#{page.capitalize}
-              %li.divider-vertical
+                %a{ href: "/#{page}" }= page.capitalize

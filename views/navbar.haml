@@ -1,29 +1,22 @@
-.navbar.navbar-inverse.navbar-fixed-top
+.navbar.navbar-inverse.navbar-fixed-top{ role: 'banner' }
   .navbar-inner
     .container
-      %a.btn.btn-navbar{ :data => { :toggle => "collapse", :target => ".nav-collapse" } }
+      %a.btn.btn-navbar{ data: { toggle: 'collapse', target: '.nav-collapse' } }
         %span.icon-chevron-down.icon-white
-      %a.brand{:href => '/'} Big Data University
+      %a.brand{ href: '/' } Big Data University
       .nav-collapse
         %ul.nav
-          - %w[courses acm-icps downloads resources].each do |tab|
+          - %w[ courses acm-icps downloads resources ].each do |tab|
             - case tab
             - when "acm-icps"
               %li.disabled
-                %a{:href => "/#{tab}"}#{tab.upcase}
+                %a{ href: "/#{tab}" }= tab.upcase
             - else
               %li
-                %a{:href => "/#{tab}"}#{tab.capitalize}
-        %form.navbar-search.form-search.pull-right
-          .input-append
-            %input.search-query.span2#appendedInput{ :name => 'q', :type => 'search', :placeholder => 'Search courses...' }
+                %a{ href: "/#{tab}" }= tab.capitalize
 
-            %button.btn.btn-inverse{ :type => 'submit' } Go
+        %ul.nav.pull-right
+          - %w[ login signup ].each do |tab|
+            %li
+              %a{ href: "/#{tab}" }= tab.capitalize
 
-.container
-  %header.page-header{ :role => 'banner' }
-    %h1
-      Big Data University
-      %br/
-      %small
-        Learn from the Industry's Best
