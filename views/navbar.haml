@@ -4,6 +4,10 @@
       %a.btn.btn-navbar{ data: { toggle: 'collapse', target: '.nav-collapse' } }
         %span.icon-chevron-down.icon-white
       %a.brand{ href: '/' } Big Data University
+      %ul.nav.pull-right
+        - %w[ login register ].each do |tab|
+          %li
+            %a{ href: "/#{tab}" }= tab.capitalize
       .nav-collapse
         %ul.nav
           - %w[ courses acm-icps downloads resources ].each do |tab|
@@ -14,9 +18,3 @@
             - else
               %li
                 %a{ href: "/#{tab}" }= tab.capitalize
-
-        %ul.nav.pull-right
-          - %w[ login signup ].each do |tab|
-            %li
-              %a{ href: "/#{tab}" }= tab.capitalize
-
