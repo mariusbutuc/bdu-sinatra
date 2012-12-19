@@ -64,15 +64,17 @@
         What is Hadoop?
     %ul.thumbnails
       %li.span4
-        .thumbnail
+        .thumbnail.pagination-centered
+          - # The trigger for the modal
           %a{ href: 'hadoop-and-big-data-video', role: 'button', data: { toggle: 'modal', target: '#Hadoop-and-Big-Data' } }
             %img.img-rounded{ src: 'img/what-is-hadoop.png', width: '360', height: '260', alt: 'Akmal Chaudhri on Hadoop and Big Data', data: { src: 'img/what-is-hadoop.png' } }
-          %p.pagination-centered
+          %p
             %small Akmal&nbsp;Chaudhri on Hadoop and Big&nbsp;Data
-          %p.pagination-centered
+          %p
             %a.btn.btn-large{ href: '/signup' }
               Sign up
-    #Hadoop-and-Big-Data.modal.hide.fade{ tabindex: '-1', role: 'dialog', 'aria-hidden' => 'true' }
+    - # The modal that will pop up
+    #Hadoop-and-Big-Data.modal.hide.fade{ tabindex: '-1', role: 'dialog', 'aria-hidden' => 'true', 'aria-labelledby' => 'Marius' }
 
   .span8
     %header
