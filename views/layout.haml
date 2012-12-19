@@ -24,7 +24,8 @@
       %form.form-search.pull-right{ role: 'search' }
         .input-append
           %input.search-query.span2#appendedInput{ name: 'q', type: 'search', placeholder: 'Search courses...' }
-          %button.btn{ type: 'submit' } Go
+          %button.btn{ type: 'submit' }
+            %i.icon-search
 
     %section.container{ role: 'main' }
       = yield
