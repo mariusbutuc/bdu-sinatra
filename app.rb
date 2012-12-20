@@ -26,3 +26,7 @@ end
 get '/hadoop-and-big-data-video/?' do
   haml :vimeo, :layout => false
 end
+
+get '/beta/?' do
+  haml :beta
+end
