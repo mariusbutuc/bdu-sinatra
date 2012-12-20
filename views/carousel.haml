@@ -1,7 +1,7 @@
 #bdu-news.carousel.slide
   .carousel-inner
     - slides = []
-    - slides << { 'img_src' => 'slide-50K.jpg', 'title' => 'Let\'s celebrate!', 'description' => 'Big Data University reaches 50000 registered members', 'url' => 'http://eepurl.com/r0mlT' }
+    - slides << { 'img_src' => 'http://crust.outlookalaska.com/Skiing2011/Kelley_DeepWaterBay_2011_pano.JPG', 'title' => 'Let\'s celebrate!', 'description' => 'Big Data University reaches 50000 registered members', 'url' => 'http://eepurl.com/r0mlT' }
     - slides << { 'img_src' => 'slide-government.jpg', 'title' => 'Demystifying Big Data in Government', 'description' => 'Demystifying Big Data in Government', 'url' => 'http://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=WH&infotype=SA&appname=SWGE_IM_DD_USEN&htmlfid=IML14336USEN&attachment=IML14336USEN.PDF' }
     - slides << { 'img_src' => 'slide-bddd-2.jpg', 'title' => 'Big Data Developer Days', 'description' => 'Understanding big data for the enterprise', 'url' => 'http://www.ibmbigdatahub.com/event/big-data-developer-days' }
     - slides << { 'img_src' => 'slide-hadoop-for-dummies.jpg', 'title' => 'Hadoop for Dummies', 'description' => 'Discover Effective Data Solutions for Your Organization', 'url' => 'http://bigdatauniversity.com/courses/course/view.php?id=301' }
@@ -12,7 +12,9 @@
       - if slide == slides.first
         .item.active
           %a{ :href => slide['url'] }
-            %img.img-rounded{ :src => "http://placehold.it/1200x480", width: 1200, height: 480 }
+            / %img{ :src => "http://placehold.it/1200x480", width: 1200, height: 480 }
+            %img{ src: slide['img_src'] , width: 1200, height: 480 }
+
             .carousel-caption
               %h4
                 #{slide['title']}
@@ -21,7 +23,7 @@
       - else
         .item
           %a{ :href => slide['url'] }
-            %img.img-rounded{ :src => "http://placehold.it/1200x480&text=#{slide['title']}", width: 1200, height: 480 }
+            %img{ :src => "http://placehold.it/1200x480&text=#{slide['title']}", width: 1200, height: 480 }
             .carousel-caption
               %h4
                 #{slide['title']}

@@ -12,14 +12,19 @@
       <![endif]-->
     %link{ href: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css' : '/css/bootstrap.css',
             type: 'text/css', rel: 'stylesheet' }
-    %link{ href: '/css/styles.css', type: 'text/css', rel: 'stylesheet' }
+    %link{ href: '/css/responsive-fix.css', type: 'text/css', rel: 'stylesheet' }
     %link{ href: Sinatra::Base.production? ? '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css' : '/css/bootstrap-responsive.css',
             type: 'text/css', rel: 'stylesheet' }
+    %link{ href: '/css/styles.css', type: 'text/css', rel: 'stylesheet' }
     %link{ href: '/img/favicon.ico', rel: 'shortcut icon' }
 
   %body
 
     = haml :navbar
+    %header.jumbotron.subhead
+      .container
+        %h1 Big&nbsp;Data University
+        %p.lead Learn from Industry's best
     .container
       %form.form-search.pull-right{ role: 'search' }
         .input-append
