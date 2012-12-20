@@ -85,7 +85,6 @@
       - Testimonial.all.sample(3).each do |t|
         %li
           %blockquote
-            %p
-              #{t.testimonial}
+            %p= t.testimonial
             %small
-              %cite #{t.author}
+              %cite= t.author
