@@ -1,64 +1,38 @@
-/* Tweak navbar brand link to be super sleek
--------------------------------------------------- */
-
-body > .navbar {
-  font-size: 13px;
-}
-
-/* Change the docs' brand */
-body > .navbar .brand {
-  padding-right: 0;
-  padding-left: 0;
-  margin-left: 20px;
-  float: right;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
-}
-body > .navbar .brand:hover {
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
-}
-
-
-.thumbnails > li {
-  margin-left: 0;
-}
-
 /* Jumbotrons
 -------------------------------------------------- */
 
 /* Base class
+
+ * gradient:  #bootstrap  #kim
+ * dark:      #020031     #101503
+ * light:     #6D3353     #7B9E19
 ------------------------- */
 .jumbotron {
   position: relative;
-  padding: 40px 0;
+  padding: 20px 0;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-  background: #020031; /* Old browsers */
-  background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* IE10+ */
-  background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #101503; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #101503 0%, #6e8d17 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#101503), color-stop(100%,#6e8d17)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #101503 0%,#6e8d17 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #101503 0%,#6e8d17 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #101503 0%,#6e8d17 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #101503 0%,#6e8d17 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101503', endColorstr='#6e8d17',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
      -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 .jumbotron h1 {
-  font-size: 80px;
+  font-size: 72px;
   font-weight: bold;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   line-height: 1;
 }
 .jumbotron p {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
   line-height: 1.25;
   margin-bottom: 30px;
@@ -113,7 +87,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   border-bottom: 1px solid #ddd;
 }
 .subhead h1 {
-  font-size: 60px;
+  font-size: 54px;
 }
 .subhead p {
   margin-bottom: 20px;
@@ -186,19 +160,10 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 
   /* Widen masthead and social buttons to fill body padding */
   .jumbotron {
-    padding: 40px 20px;
+    padding: 20px 20px;
     margin-top:   -20px; /* Offset bottom margin on .navbar */
     margin-right: -20px;
     margin-left:  -20px;
-  }
-}
-
-/* Landscape phones
-------------------------- */
-@media (max-width: 480px) {
-  /* Remove padding above jumbotron */
-  body {
-    padding-top: 0;
   }
 
   /* Downsize the jumbotrons */
@@ -215,8 +180,27 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   }
 
   /* center align subhead text like the masthead */
+  /*
   .subhead h1,
   .subhead p {
     text-align: center;
   }
+  */
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+
+}
+
+/* Marius hacks
+-------------------------------------------------- */
+
+h2, h3 {
+  color: #7B9E19;
+}
+
+.row-fluid .thumbnails > li {
+  margin-left: 0;
 }

@@ -1,5 +1,10 @@
 get '/' do
+  require 'net/http'
   # @testimonials = Testimonial.all.sample(3)
+  registered_users_url = 'http://bigdatauniversity.com/web/registered_users.php'
+  get_registered_users = Net::HTTP.get_response(URI.parse(registered_users_url))
+  @registered_users = get_registered_users.body
+
 	haml :index
 end
 
