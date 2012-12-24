@@ -11,7 +11,7 @@
   position: relative;
   padding: 20px 0;
   color: #fff;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
   background: #101503; /* Old browsers */
   background: -moz-linear-gradient(45deg,  #101503 0%, #6e8d17 100%); /* FF3.6+ */
@@ -24,9 +24,10 @@
   -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
      -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+  border-bottom: 1px solid #ddd;
 }
 .jumbotron h1 {
-  font-size: 72px;
+  font-size: 54px;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1;
@@ -35,7 +36,7 @@
   font-size: 22px;
   font-weight: 300;
   line-height: 1.25;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* Link styles (used on .masthead-links as well) */
@@ -66,8 +67,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(/img/bs-docs-masthead-pattern.png) repeat center center;
-  opacity: .4;
+  background: url(/img/jumbotron-pattern.png) repeat center center;
+  opacity: .2;
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -80,21 +81,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 
 }
 
-/* Subhead (other pages)
-------------------------- */
-.subhead {
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-.subhead h1 {
-  font-size: 54px;
-}
-.subhead p {
-  margin-bottom: 20px;
-}
-.subhead .navbar {
-  display: none;
-}
+
 
 /* Responsive
 -------------------------------------------------- */
@@ -108,22 +95,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 /* Desktop
 ------------------------- */
 @media (max-width: 980px) {
-  /* Unfloat brand */
-  body > .navbar-fixed-top .brand {
-    float: left;
-    margin-left: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 
-  /* When affixed, space properly */
-  /* TODO: Make sure the social buttons are nice   --Marius */
-  .bs-docs-sidenav {
-    top: 0;
-    width: 218px;
-    margin-top: 30px;
-    margin-right: 0;
-  }
 }
 
 /* Tablet to desktop
@@ -138,14 +110,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
   /* Widen masthead and social buttons to fill body padding */
   .jumbotron {
     margin-top: -20px; /* Offset bottom margin on .navbar */
-  }
-  /* Adjust sidenav width */
-  .bs-docs-sidenav {
-    width: 166px;
-    margin-top: 20px;
-  }
-  .bs-docs-sidenav.affix {
-    top: 0;
   }
 }
 
@@ -203,4 +167,8 @@ h2, h3 {
 
 .row-fluid .thumbnails > li {
   margin-left: 0;
+}
+
+.form-search {
+  margin: 20px 0;
 }

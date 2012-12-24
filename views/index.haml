@@ -1,13 +1,8 @@
-%header.jumbotron.subhead
+%header.jumbotron
   .container
     %h1 Learn From the Industry's Best
     %p.lead= "Join #{@registered_users} registered students and put your career on the right track"
-.container
-  %form.form-search.pull-right{ role: 'search' }
-    .input-append
-      %input.search-query.span2#appendedInput{ name: 'q', type: 'search', placeholder: 'Search courses...' }
-      %button.btn.btn-inverse{ type: 'submit' }
-        %i.icon-search.icon-white
+= haml :search
 
 %section.container{ role: 'main' }
   = haml :carousel
