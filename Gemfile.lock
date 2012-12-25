@@ -62,9 +62,13 @@ GEM
     fastercsv (1.5.5)
     haml (3.1.4)
     hashr (0.0.22)
+    httparty (0.9.0)
+      multi_json (~> 1.0)
+      multi_xml
     json (1.7.5)
     json_pure (1.7.5)
     multi_json (1.5.0)
+    multi_xml (0.5.1)
     pg (0.14.1)
     rack (1.4.1)
     rack-protection (1.2.0)
@@ -115,6 +119,7 @@ DEPENDENCIES
   dm-postgres-adapter
   dm-sqlite-adapter
   haml
+  httparty
   pg
   rake
   ruby-progressbar

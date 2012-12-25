@@ -6,6 +6,7 @@ gem 'haml'
 gem 'shotgun'
 gem 'thin'
 gem 'ruby-progressbar'
+gem 'httparty'
 
 
 group :production do
