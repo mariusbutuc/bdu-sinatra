@@ -20,20 +20,20 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/bdu.db")
 #   end
 # end
 
-# class News
-#   include DataMapper::Resource
-#   property :id,           Serial
-#   property :created_at,   DateTime
-#   property :modified_at,  DateTime
-#   property :active,       Boolean,  default: true
+class News
+  include DataMapper::Resource
+  property :id,           Serial
+  property :created_at,   DateTime
+  property :modified_at,  DateTime
+  property :active,       Boolean,  default: true
 
-#   property :position,     Integer
+  property :position,     Integer
 
-#   property :title,        String,   required: true, length: 100
-#   property :description,  Text
-#   property :url,          URI,      required: true
-#   property :img_url,      URI,      required: true
-# end
+  property :title,        String,   required: true, length: 100
+  property :description,  Text
+  property :url,          URI,      required: true
+  property :img_url,      URI,      required: true
+end
 
 class Testimonial
   include DataMapper::Resource

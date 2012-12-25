@@ -1,9 +1,13 @@
 get '/' do
-  require 'net/http'
   # @testimonials = Testimonial.all.sample(3)
-  registered_users_url = 'http://bigdatauniversity.com/web/registered_users.php'
-  get_registered_users = Net::HTTP.get_response(URI.parse(registered_users_url))
-  @registered_users = get_registered_users.body
+  # require 'net/http'
+  # registered_users_url = 'http://bigdatauniversity.com/web/registered_users.php'
+  # get_registered_users = Net::HTTP.get_response(URI.parse(registered_users_url))
+  # @registered_users = get_registered_users.body
+  @registered_users = '57131'
+
+  @news = News.all(active: true)
+  @testimonials = Testimonial.all(active: true).sample(3)
 
 	haml :index
 end

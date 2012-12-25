@@ -5,6 +5,8 @@ gem 'data_mapper'
 gem 'haml'
 gem 'shotgun'
 gem 'thin'
+gem 'ruby-progressbar'
+
 
 group :production do
   gem 'pg'

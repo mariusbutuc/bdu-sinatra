@@ -88,8 +88,7 @@
         %h3
           According to big data users&hellip;
       %ul.unstyled
-        -# TODO: get the testimonials from the DB
-        - Testimonial.all.sample(3).each do |t|
+        - @testimonials.each do |t|
           %li
             %blockquote
               %p= t.testimonial
