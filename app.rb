@@ -1,10 +1,5 @@
 get '/' do
-  # @testimonials = Testimonial.all.sample(3)
-  # require 'net/http'
-  # registered_users_url = 'http://bigdatauniversity.com/web/registered_users.php'
-  # get_registered_users = Net::HTTP.get_response(URI.parse(registered_users_url))
-  # @registered_users = get_registered_users.body
-  @registered_users = '57131'
+  @registered_users = get_registered_users
 
   @news = News.all(active: true)
   @testimonials = Testimonial.all(active: true).sample(3)
