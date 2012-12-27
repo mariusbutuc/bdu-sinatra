@@ -142,14 +142,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     display: block;
     margin: 0 auto;
   }
-
-  /* center align subhead text like the masthead */
-  /*
-  .subhead h1,
-  .subhead p {
-    text-align: center;
-  }
-  */
 }
 
 /* Landscape phones
@@ -169,6 +161,26 @@ h2, h3 {
   margin-left: 0;
 }
 
+.navbar .brand {
+  padding: 8px 20px 10px;
+}
+
 .form-search {
-  margin: 20px 0;
+  margin: 10px 0;
+}
+
+footer .navbar .nav {
+  float: none;
+  width: 400px;
+  margin: 0 auto;s
+}
+
+.sub-jumbotron {
+  background: #F4F5E9;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.navbar .nav > li.omega > a {
+  padding-right: 0;
 }

@@ -2,11 +2,11 @@
   .container
     %h1 Learn From the Industry's Best
     %p.lead= "Join #{@registered_users} registered students and put your career on the right track"
-= haml :search
-
-%section.container{ role: 'main' }
+.sub-jumbotron
+  = haml :search
   = haml :carousel
 
+%section.container{ role: 'main' }
   .row
     .span4
       %header
