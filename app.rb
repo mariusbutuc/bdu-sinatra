@@ -9,7 +9,7 @@ end
 
 redirects = {
   'courses'   => 'http://bigdatauniversity.com/courses',
-  'acm-icps'  => 'http://bigdatauniversity.com',
+  'acm-icpc'  => 'http://bigdatauniversity.com',
   'downloads' => 'http://bigdatauniversity.com/web/download.php',
   'resources' => 'http://bigdatauniversity.com/web/resources.php',
   'register'  => 'http://bigdatauniversity.com/courses/auth/openid/login.php',

@@ -162,7 +162,7 @@ h2, h3 {
 }
 
 .navbar .brand {
-  padding: 8px 20px 10px;
+  padding: 7px 20px 10px;
 }
 
 .form-search {
@@ -183,4 +183,9 @@ footer .navbar .nav {
 
 .navbar .nav > li.omega > a {
   padding-right: 0;
+}
+
+section[role="main"] hr {
+  border-top: 1px solid #DDD;
+  margin: 30px 0 10px;
 }
