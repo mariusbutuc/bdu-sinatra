@@ -4,7 +4,7 @@ get '/' do
   @news = News.all(active: true)
   @testimonials = Testimonial.all(active: true).sample(3)
 
-	haml :index
+  haml :index
 end
 
 redirects = {
